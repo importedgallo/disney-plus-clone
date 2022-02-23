@@ -38,7 +38,7 @@ function Header() {
 
 export default Header
 
-const Nav = styled.div `
+const Nav = styled.div`
     height: 70px;
     background: #090b13;
     display: flex;
@@ -65,7 +65,7 @@ const NavMenu = styled.div`
     cursor: pointer;
     img {
       height: 20px;
-      padding: 10px;
+      padding: 15px;
     }
     span {
       font-size: 13px;
