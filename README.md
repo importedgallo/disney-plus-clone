@@ -1,4 +1,5 @@
 # Disney+ website clone
+`npm run` or `yarn start`
 ### Stack:
 - ReactJS
 - Redux
@@ -10,4 +11,4 @@
 - [ ] create main page component
 - [ ] create profile dropdown
 
-`npm run` or `yarn start`
+
