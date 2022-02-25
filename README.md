@@ -8,7 +8,9 @@
 ### Tasks
 - [x] create header
 - [x] create slider component
-- [ ] create main page component
+- [ ] create viewers components
+- [ ] create recommendations component
+- [ ] fix slider overflow bug
 - [ ] create profile dropdown
 
 
