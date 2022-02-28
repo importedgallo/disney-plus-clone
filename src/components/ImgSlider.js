@@ -64,15 +64,14 @@ const Carousel = styled(Slider)`
 
 const Wrap = styled.div`
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   img {
     border: 4px solid transparent;
     width: 100%;
     height: 100%;
     border-radius: 18px;
-    ${'' /* box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
-                rgb(0 0 0 / 73%) 0px 16px 0px -10px; */}
     transition-duration: 300ms;
+    box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
+                rgb(0 0 0 / 73%) 0px 16px 0px -10px;
 
     &:hover {
         border: 4px solid rgba(249, 249, 249, 0.8);
