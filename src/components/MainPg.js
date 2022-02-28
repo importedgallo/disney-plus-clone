@@ -1,69 +1,46 @@
 import React from "react";
 import styled from "styled-components";
+import Slider from "react-slick";
 
 function MainPg() {
+  let settings = {
+    centerMode: true,
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 3,
+    speed: 500,
+    rows: 4,
+    slidesPerRow: 4,
+  };
+
   return (
     <Container>
-      <Wrap>
-        <img src="/images/viewers-disney.png" />
-      </Wrap>
-      <Wrap>
-        <img src="/images/viewers-marvel.png" />
-      </Wrap>
-      <Wrap>
-        <img src="/images/viewers-national.png" />
-      </Wrap>
-      <Wrap>
-        <img src="/images/viewers-pixar.png" />
-      </Wrap>
-      <Wrap>
-        <img src="/images/viewers-starwars.png" />
-      </Wrap>
-      <Wrap>
-        <img src="/images/viewers-disney.png" />
-      </Wrap>
-      <Wrap>
-        <img src="/images/viewers-marvel.png" />
-      </Wrap>
-      <Wrap>
-        <img src="/images/viewers-national.png" />
-      </Wrap>
-      <Wrap>
-        <img src="/images/viewers-pixar.png" />
-      </Wrap>
-      <Wrap>
-        <img src="/images/viewers-starwars.png" />
-      </Wrap>
-      <Wrap>
-        <img src="/images/viewers-disney.png" />
-      </Wrap>
-      <Wrap>
-        <img src="/images/viewers-marvel.png" />
-      </Wrap>
-      <Wrap>
-        <img src="/images/viewers-national.png" />
-      </Wrap>
-      <Wrap>
-        <img src="/images/viewers-pixar.png" />
-      </Wrap>
-      <Wrap>
-        <img src="/images/viewers-starwars.png" />
-      </Wrap>
-      <Wrap>
-        <img src="/images/viewers-disney.png" />
-      </Wrap>
-      <Wrap>
-        <img src="/images/viewers-marvel.png" />
-      </Wrap>
-      <Wrap>
-        <img src="/images/viewers-national.png" />
-      </Wrap>
-      <Wrap>
-        <img src="/images/viewers-pixar.png" />
-      </Wrap>
-      <Wrap>
-        <img src="/images/viewers-starwars.png" />
-      </Wrap>
+      <Carousel {...settings}>
+        <Wrap>
+          <img src="/images/viewers-disney.png"></img>
+        </Wrap>
+        <Wrap>
+          <img src="/images/viewers-disney.png"></img>
+        </Wrap>
+        <Wrap>
+          <img src="/images/viewers-disney.png"></img>
+        </Wrap>
+        <Wrap>
+          <img src="/images/viewers-disney.png"></img>
+        </Wrap>
+        <Wrap>
+          <img src="/images/viewers-disney.png"></img>
+        </Wrap>
+        <Wrap>
+          <img src="/images/viewers-disney.png"></img>
+        </Wrap>
+        <Wrap>
+          <img src="/images/viewers-disney.png"></img>
+        </Wrap>
+        <Wrap>
+          <img src="/images/viewers-disney.png"></img>
+        </Wrap>
+      </Carousel>
     </Container>
   );
 }
@@ -71,28 +48,49 @@ function MainPg() {
 export default MainPg;
 
 const Container = styled.div`
-  padding: 50px 0px 20px;
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  height: 100%;
+  width: 100%;
+
+
+`;
+const Carousel = styled(Slider)`
+  margin-top: 20px;
+
+  ul li button {
+    &:before {
+      font-size: 10px;
+      color: rgb(150, 158, 171);
+    }
+  }
+
+  li.slick-active button::before {
+    color: white;
+  }
+
+  .slick-list {
+    overflow: visible;
+  }
+
+  button {
+    height: 100%;
+    right-width: 20px;
+    z-index: 2;
+  }
 `;
 
 const Wrap = styled.div`
   cursor: pointer;
-  border: 3px solid rgba(249, 249, 249, 0.1);
-  border-radius: 10px;
-  box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
-    rgb(0 0 0 / 73%) 0px 16px 10px -10px;
-  transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
-
   img {
+    border: 4px solid transparent;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-  }
-  &:hover {
-    transform: scale(1.05);
-    border-color: rgba(74, 5, 171, 0.7);
-    background-color: rgb(51, 54, 69);
+    border-radius: 18px;
+    transition-duration: 300ms;
+    box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
+      rgb(0 0 0 / 73%) 0px 16px 0px -10px;
+
+    &:hover {
+      border: 4px solid rgba(249, 249, 249, 0.8);
+    }
   }
 `;
