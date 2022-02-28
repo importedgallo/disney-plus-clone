@@ -50,5 +50,6 @@ const Wrap = styled.div`
     &:hover {
         transform: scale(1.05);
         border-color: rgba(74, 5, 171, 0.7);
+        background-color: rgb(51, 54, 69); 
     }
 `
